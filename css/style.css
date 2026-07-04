@@ -8,6 +8,57 @@ body {
   user-select: none;
 }
 
+/*done massege*/
+
+.done {
+  height: 150vh;
+  width: 100%;
+  position: absolute;
+  top: -200%;
+  left: 0;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  z-index: 99999;
+  transition: 1s;
+  button {
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1px solid #000;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #f00;
+    transition: 0.5s;
+  }
+  button:hover {
+    background-color: #9B2400;
+  }
+  span {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #00ff00;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
+
 /*start header*/
 
 header {
@@ -23,6 +74,11 @@ header {
   align-items: center;
   background-color: #ff9f00;
   z-index: 99;
+  div {
+    display: flex;
+    gap: 10px; 
+    align-items: center;
+  }
 }
 
 header h3:first-child {
@@ -52,6 +108,23 @@ header h3 {
   align-items: center;
   color: #fff;
   background-color: #000;
+}
+.check {
+  height: 2rem;
+  width: 3rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  transition: 0.5s;
+}
+
+.check:hover {
+  border-color: #000;
+  color: #000;
+  background-color: #fff;
 }
 
 /*end header*/
@@ -261,9 +334,20 @@ main .price {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   main .price h2 {
-    font-size: 16px;
+    padding: 5px;
+    font-size: 18px;
+    width: 90%;
+  }
+  main .price #cart {
+    height: 80vh;
+    width: 100%;
+    align-items: center;
+    .pro {
+      height: 6rem;
+      flex-direction: column;
+    }
   }
 }
 

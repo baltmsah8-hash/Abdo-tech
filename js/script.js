@@ -1,3 +1,11 @@
+// variables of Product Confirmation Button
+
+let btnConf = document.querySelector('.check');
+
+let done = document.querySelector('.done');
+
+let returnBtn = document.getElementById('return');
+
 //variables of total price
 let cardsBtn = document.querySelector('.cards');
 
@@ -13,7 +21,7 @@ let count = 0;
 
 //variables of cart
 
-let cart = document.getElementById('cart');
+const cart = document.getElementById('cart');
 
 let emptyCart = true;
 
@@ -54,6 +62,9 @@ cardsBtn.addEventListener('click', function (e) {
       
       total -= price;
       totalPrice.innerText = `$ ${total}`;
+      if (total === 0) {
+        totalPrice.innerText = '$ 0.00';
+      }
       
       count -= 1;
       countCart.innerText = count;
@@ -64,4 +75,21 @@ cardsBtn.addEventListener('click', function (e) {
     }
   }
  }
+});
+
+btnConf.addEventListener('click', function () {
+  if (!emptyCart) {
+    done.style.top = '0%';
+    cart.innerHTML = 'the cart empty!';
+    count = 0;
+    countCart.innerText = count;
+    emptyCart = true;
+    total = 0;
+    totalPrice.innerText = '$ 0.00';
+    returnBtn.onclick = () => {
+      done.style.top = '-200%';
+    }
+  } else {
+    alert('you should buy anything');
+  }
 });

@@ -4,14 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="images/icons8-store-16.png">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <title>technology store</title>
   </head>
   <body>
+    <div class="done">
+      <button id="return"><i class="fa-solid fa-xmark"></i></button>
+      <span><i class="fa-solid fa-check"></i></span>
+      <h3>Successful operation</h3>
+    </div>
     <header>
       <h3 class="logo">A</h3>
-      <h3><i class="fa-solid fa-cart-shopping"></i><span id="count">0</span></h3>
+      <div>
+        <button class="check"><i class="fa-solid fa-check"></i></button>
+        <h3><i class="fa-solid fa-cart-shopping"></i><span id="count">0</span></h3>
+      </div>
     </header>
     <main>
       <section class="products">
@@ -67,6 +75,6 @@
     <footer>
       <p>codding by <a href="https://github.com/baltmsah8-hash">abdo-hany</a></p>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

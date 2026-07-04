@@ -86,10 +86,11 @@ btnConf.addEventListener('click', function () {
     emptyCart = true;
     total = 0;
     totalPrice.innerText = '$ 0.00';
-    returnBtn.onclick = () => {
-      done.style.top = '-200%';
-    }
   } else {
     alert('you should buy anything');
   }
 });
+
+returnBtn.onclick = () => {
+      done.style.top = '-200%';
+};
